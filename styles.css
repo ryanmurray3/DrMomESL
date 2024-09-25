@@ -245,7 +245,7 @@ body {
     padding-bottom: .5em;
 }
 
-#item1, #item2, #item3, #item4, #input1, #input2, #input3 {
+#item1, #item2, #item3, #item4,#item5, #item6, #item7, #input1, #input2, #input3 {
     max-width: fit-content;
 }
 

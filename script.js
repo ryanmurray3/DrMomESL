@@ -152,11 +152,14 @@ function checkExercise4() {
     let item2 = document.getElementById("item2").value.toLowerCase();
     let item3 = document.getElementById("item3").value.toLowerCase();
     let item4 = document.getElementById("item4").value.toLowerCase();
+    let item5 = document.getElementById("item5").value.toLowerCase();
+    let item6 = document.getElementById("item6").value.toLowerCase();
+    let item7 = document.getElementById("item7").value.toLowerCase();
     
     let feedback = "";
     let feedbackElement = document.getElementById("exercise4Feedback");
 
-    if (item1 === "an eraser" && item2 === "pens" && item3 === "a dictionary" && item4 === "apples") {
+    if (item1 === "an eraser" && item2 === "pens" && item3 === "notebooks" && item4 === "dictionary" && item5 === "apples" && item6 === "orange" && item7 === "banana") {
         feedback = "<span style='color:green;'>All answers are correct!</span>";
     } else {
         feedback = "Check your answers. Some are incorrect.";
@@ -174,10 +177,10 @@ function checkExercise5() {
     let feedback = "";
     let feedbackElement = document.getElementById("exercise5Feedback");
 
-    if (proper1 === "Maria" && proper2 === "Mona" && proper3 === "London" && proper4 === "São Paulo" && proper5 === "Seattle") {
+    if (proper1 === "My friend is Maria." && proper2 === "Mona is from Egypt." && proper3 === "This is Al. He's a teacher. He's from London" && proper4 === "She's from Sao Paulo" && proper5 === "Seattle is a city. It's in the United States.") {
         feedback = "<span style='color:green;'>All answers are correct!</span>";
     } else {
-        feedback = "Check your capitalization.";
+        feedback = "Check your capitalization or punctuation. Did you type the entire sentence(s)";
     }
     feedbackElement.innerHTML = feedback;
 }
