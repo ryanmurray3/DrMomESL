@@ -279,7 +279,45 @@ table thead {
     font-size: 32px;
 }
 
+ /* step 2 tables */
+ .card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1105px;
+    margin: 0 auto;
+}
+.card {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
+.card h3 {
+    background-color: #3a73ab;
+    color: whitesmoke;
+    padding: 2px;
+    padding-left: 7px;
+}
+.table-row {
+    display: flex;
+    justify-content: space-between;
+}
+table {
+    width: 30%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: #ddd;
+}
 
 /* Usage Note */
 .usage-note {
