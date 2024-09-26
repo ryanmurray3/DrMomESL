@@ -1,0 +1,40 @@
+/* General Styles */
+@font-face {
+    font-family: 'nevis'; /* Name your font */
+    src: url('fonts/Nevis/nevis.ttf') format('nevis'); /* Specify the path to the font file and format */
+}
+
+body {
+    font-family: 'nevis', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+h1 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+h1 {
+    font-family: nevis, sans-serif;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: rgba(49, 49, 50, 0.841);
+    border: solid 2px;
+    border-radius: 5px;
+}
+
+ul, li {
+    margin-left: 10%;
+    list-style: none;
+    font-size: 24px;
+}
