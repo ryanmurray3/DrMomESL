@@ -435,6 +435,73 @@ table td {
     color: #888;
 }
 
+/* Styling for images */
+.image-placeholder {
+    width: 200px;
+    height: 150px;
+    background-color: #ddd;
+    margin-bottom: 10px;
+    border: 2px dashed #ccc;
+}
+
+.exercise ul {
+    list-style: none;
+}
+
+.exercise3-images {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    padding-left: 25px;
+    
+}
+
+.exercise3-images h3 {
+    padding-top: 25px;
+}
+
+.image-placeholder {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    
+}
+
+/* exercise 4 */
+.exercise-4-table tr td {
+    text-align: left;
+    border: none;
+}
+
+/* Styling for the student info table in Exercise 5 */
+.student-info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.student-info-table th, .student-info-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+.student-info-table th {
+    color: #f0f0f0;
+    background-color: #092847;
+
+}
+
+#name-ex5 {
+    color: #f0f0f0;
+    background-color: #336699;
+}
+
+.input-exercise {
+    width: 60%;
+}
+
 /* Editing Checklist */
 .editing-checklist {
     background-color: #f5f5f5;
