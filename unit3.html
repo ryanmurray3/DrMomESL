@@ -35,28 +35,16 @@
             <p>Study the words. Then work with a partner. Practice the conversation.</p>
             <div class="vocabulary-images">
                 <div class="image-container" id="dirty-img">
-                    <p>Placeholder for Dirty Image</p>
-                    <p>dirty</p>
-                </div>
-                <div class="image-container" id="clean-img">
-                    <p>Placeholder for Clean Image</p>
-                    <p>clean</p>
+                    <img src="images_unit3/dirtyAndclean.jpg" alt="dirty dishes and clean dishes" id="dirty-image1"> 
                 </div>
                 <div class="image-container" id="far-img">
-                    <p>Placeholder for Far Image</p>
-                    <p>far</p>
-                </div>
-                <div class="image-container" id="near-img">
-                    <p>Placeholder for Near Image</p>
-                    <p>near</p>
+                    <img src="images_unit3/farAndnear.jpeg" alt="african plains tree in the foreground is near and tree in the background is far" id="far-img1">   
                 </div>
                 <div class="image-container" id="boring-img">
-                    <p>Placeholder for Boring Image</p>
-                    <p>This is boring.</p>
+                   <img src="images_unit3/thisisBoring.jpeg" alt="tow girls sitting down watch tv and say this is boring" id="boring-img1">
                 </div>
                 <div class="image-container" id="fun-img">
-                    <p>Placeholder for Fun Image</p>
-                    <p>This is fun!</p>
+                    <img src="images_unit3/thisIsfun.jpeg" alt="man and woman ride bicyles in city park having fun" id="fun-img1">
                 </div>
             </div>
         </div>
@@ -97,10 +85,10 @@
         </div>
         <div class="reading-images">
             <div class="image-container" id="seattle-people-img">
-                <p>Placeholder for Seattle People Image</p>
+                <img src="images_unit3/seattlePeople.jpeg" alt="four friends talking to each other" id="seattle-people-img1">
             </div>
             <div class="image-container" id="australia-map-img">
-                <p>Placeholder for Australia Map Image</p>
+                <img src="images_unit3/Australiaunit3.jpeg" alt="map image of Australia" id="australia-map-img1">
             </div>
         </div>
     </section>
@@ -108,10 +96,25 @@
     <!-- Section for after the reading -->
     <section id="after-reading-section">
         <h3>After You Read</h3>
+        <p id="instructions">Look at the conversation again. Click on the red word and enter the correction.</p>
         <div class="comprehension-exercise">
             <h4>Comprehension</h4>
-            <p>Look at the conversation again. Correct the underlined words.</p>
+            <!-- <p>Look at the conversation again. Correct the underlined words.</p>
             <p>Jenny and Amy are in <u>Sydney</u>. Steve is Amy's <u>uncle</u>. Steve introduces Jenny and Amy to Mark. Amy talks about her <u>family</u>. Amy says Seattle <u>is not</u> a beautiful city. It's <u>dirty</u>. It's <u>boring</u>, and the people are <u>unfriendly</u>.</p>
+        </div> -->
+        <p>
+            Jenny and Amy are in <span class="red" data-original="Sydney">Sydney</span>. 
+            Steve is Amy's <span class="red" data-original="uncle">uncle</span>. 
+            Steve introduces Jenny and Amy to Mark. Amy talks about her <span class="red" data-original="family">family</span>. 
+            Amy says Seattle is <span class="red" data-original="not">not</span> a beautiful city. It's <span class="red" data-original="dirty">dirty</span>. 
+            It's <span class="red" data-original="boring">boring</span>, and the people are <span class="red" data-original="unfriendly">unfriendly</span>.
+        </p>
+    
+        <!-- Input box that will be displayed on click -->
+        <div id="inputBox" style="display:none; position: absolute;">
+            <input type="text" id="correctWord" placeholder="Enter correct word">
+            <button onclick="submitCorrection()">Submit</button>
+        </div>
         </div>
     </section>
         <div>   
@@ -365,8 +368,8 @@
     <h2>EXERCISE 3: CONTRACTIONS</h2>
     <p>Read the sentences. Change the full forms to contractions.</p>
         <div class="exercise3-images">
-            <div class="image-placeholder" id="image-placeholder-1"><img src="images/glasses.jpg"><h3 >cold</h3></div>
-            <div class="image-placeholder" id="image-placeholder-1"><img src="images/glasses.jpg"><h3 >hot</h3></div>
+            <div class="image-placeholder" id="image-placeholder-1"><img src="images_unit3/coldU3Ex3.jpeg"><h3 >cold</h3></div>
+            <div class="image-placeholder" id="image-placeholder-1"><img src="images_unit3/hotU3Ex3.jpeg"><h3 >hot</h3></div>
         </div>
     <ul>
         <li>1. It is <input type="text" id="input-3-1" class="input-exercise"> cold here.</li>
@@ -462,6 +465,11 @@
         <p><strong>Grammar Notes 1-2:</strong> Complete the email. Circle the correct answers.</p>
         
         <div class="email-container">
+            
+            <div class="exercise-6-image">
+                <img src="images_unit3/womanRainyDayEx6.jpeg" alt="woman holds an umbrella in a city park and it rains" id="womanRainyDayEx6">
+
+            </div>
             <h4>Dear Mom and Dad,</h4>
             <p>
                 Maya and I am / are in Seattle, but we now am not / are not at the Western Hotel any longer. 
@@ -492,7 +500,11 @@
 
     <!-- Section for Exercise 8 -->
     <section id="exercise-8">
-        <h2>Exercise 8: Listening</h2>
+        
+        <h2> <span id="step4">Step 4:</span>Exercise 8: Listening</h2>
+        <div class="chef-image">
+            <img src="images_unit3/chefU3Ex8.jpeg" alt="chef with arms crossed smiles" id="exercise-8-image">
+        </div>
         <h3>Part A</h3>
         <p>Listen to the conversation. Which sentence is true? Circle the correct answer.</p>
         <ul>
@@ -510,9 +522,7 @@
             <li>Italian food is not popular in Australia. <input type="checkbox"> True <input type="checkbox"> False</li>
         </ul>
 
-        <div class="chef-image">
-            <p>Placeholder for chef image</p>
-        </div>
+     
     </section>
 
     <!-- Section for Exercise 9 -->
@@ -571,11 +581,11 @@
             <h2>From Grammar to Writing</h2>
             <h3>Before You Write</h3>
             <p>Read about a city. Underline the verb <i>be</i>. Then complete the chart about a city you know. Work with a partner. Tell your partner about the city.</p>
-    
+            <div class="image-container-city-image">
+                <img src="images_unit3/bogotaG2W.jpeg" alt="daytime skyline of Bogota, Columbia" id="city-info-image">
+            </div>
             <div class="city-info">
-                <div class="image-container">
-                    <p>Placeholder for city image</p>
-                </div>
+            
                 <p><strong>Bogotá</strong> is a city in Colombia. It’s great. It’s not cold in winter. It’s not hot in summer. The people are friendly, and the parks are fun. I love Bogotá.</p>
     
                 <table>
