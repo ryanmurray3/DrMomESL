@@ -21,7 +21,7 @@ body {
 
 .header-container {
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
     width: 100%;
 }
 
@@ -32,13 +32,13 @@ body {
 }
 
 .unit-info h3 {
-    
-    font-size: 1.4em;
+    width: 760px;
+    font-size: 2.8em;
     margin: 5px 0;
 }
 
 .unit-info p {
-    font-size: 1.2em;
+    font-size: 1.9em;
     font-weight: bold;
     color: #333;
 }
