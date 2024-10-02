@@ -515,6 +515,33 @@ span[id$="-feedback"] span[color="red"] {
     border: none;
 }
 
+/* General Reset Button Styling */
+.reset-btn {
+    background-color: #999999; /* Gray color to differentiate from submit button */
+    color: #fff; /* White text for readability */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 10px; /* Add some space between submit and reset buttons */
+}
+
+/* Hover Effect */
+.reset-btn:hover {
+    background-color: #777777; /* Darker gray for hover effect */
+    transform: translateY(-2px); /* Slight elevation on hover */
+}
+
+/* Focus Effect */
+.reset-btn:focus {
+    outline: 3px solid #FDE599; /* Light yellow outline for accessibility */
+}
+
+
 /* Styling for the student info table in Exercise 5 */
 .student-info-table {
     width: 100%;
@@ -541,6 +568,7 @@ span[id$="-feedback"] span[color="red"] {
 }
 
 .input-exercise {
+    font-size: medium;
     width: fit-content;
 }
 

@@ -411,7 +411,7 @@
             5. I am a teacher.<br>
             6. It is boring.<br>
             7. These are good chairs.<br>
-            8. Jenny is my sister,
+            8. Jenny is my sister.
             </td>
             <td><input type="text" id="input-4-3-1" class="input-exercise" placeholder="I am not hot."><br>
                 <input type="text" id="input-4-3-2" class="input-exercise"><br>
@@ -433,6 +433,9 @@
             </td>
         </tr>
     </table>
+    <button class="submit-btn" onclick="checkExercise4Answers()">Submit Answers</button>
+    <button class="reset-btn" onclick="resetExercise4Answers()">Reset Answers</button>
+    
 </div>
 
 <!-- Exercise 5: Affirmative and Negative -->
@@ -460,7 +463,7 @@
         </tbody>
     </table>
     <ul>
-        <li>1. Leonardo is from Turkey.</li>  <input type="text" id="input-5" class="input-exercise"></li>
+        <li>1. Leonardo is from Turkey.</li>  <input type="text" id="input-5" class="input-exercise" placeholder="No, he isn't. He is from Brazil."></li>
         <li>2. Min is 26.</li> <input type="text" id="input-5" class="input-exercise"></li>
         <li>3. Saleh is from Mexico.</li> <input type="text" id="input-5" class="input-exercise"></li>
         <li>4. Yumiko and Junko are from China.</li> <input type="text" id="input-5" class="input-exercise"></li>
@@ -503,12 +506,15 @@
         <h2>Exercise 7: Editing</h2>
         <p>There are six mistakes in the conversations. The first mistake is corrected. Correct five more.</p>
         <ol>
-            <li>A: The food good. <br> B: You’re right.</li>
-            <li>A: My cousin from Tokyo. She’s a student. <br> B: I’m from Tokyo. I no am a student.</li>
-            <li>A: Seattle is a big city in California. <br> B: No, it’s isn’t. Seattle is in Washington.</li>
-            <li>A: The people is friendly here. <br> B: I know. They’re great.</li>
-            <li>A: Sydney is a great city. <br> B: Yes. Is beautiful.</li>
+            <li>A: The food good.<input type="text" id="input-7-1A" class="exercise-7-input" style="width: 250px" placeholder="The food is good."> <br> B: You’re right. <input type="text" id="input-7-1B" class="exercise-7-input" style="width: 250px"></li>
+            <li>A: My cousin from Tokyo. She’s a student. <input type="text" id="input-7-2A" class="exercise-7-input" style="width: 250px"> <br> B: I’m from Tokyo. I no am a student. <input type="text" id="input-7-2B" class="exercise-7-input" style="width: 250px"></li>
+            <li>A: Seattle is a big city in California. <input type="text" id="input-7-3A" class="exercise-7-input" style="width: 250px"><br> B: No, it’s isn’t. Seattle is in Washington. <input type="text" id="input-7-3B" class="exercise-7-input" style="width: 250px"></li>
+            <li>A: The people is friendly here. <input type="text" id="input-7-4A" class="exercise-7-input" style="width: 250px"><br> B: I know. They’re great. <input type="text" id="input-7-4B" class="exercise-7-input" style="width: 250px"></li>
+            <li>A: Sydney is a great city. <input type="text" id="input-7-5A" class="exercise-7-input" style="width: 250px"><br> B: Yes. Is beautiful. <input type="text" id="input-7-5B" class="exercise-7-input" style="width: 250px"></li>
         </ol>
+        <button class="submit-btn" onclick="checkExercise7Answers()">Submit Answers</button>
+        <button class="reset-btn" onclick="resetExercise7Answers()">Reset Answers</button>
+
     </section>
 
     <!-- Section for Exercise 8 -->
