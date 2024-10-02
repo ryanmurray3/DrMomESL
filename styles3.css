@@ -21,7 +21,7 @@ body {
 
 .header-container {
     display: flex;
-    gap: 10px;
+    justify-content: space-around;
     width: 100%;
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 .unit-info h3 {
-    width: 760px;
+    
     font-size: 2.8em;
     margin: 5px 0;
 }
@@ -124,33 +124,38 @@ section {
 
 .vocabulary-images {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 20px;
+    width: 100%;
 }
-
+ 
 .image-container {
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    width: 150px;
+    
+    padding: 8px;
+    margin: 0px 10px;
 }
 
 .image-container p {
     margin: 10px 0;
 }
 
-#dirty-img #dirty-image1, #far-img #far-img1 {
+.vocabulary-images {
     background-color: none;
-    width: 300px;
+    width: 15em;
     height: auto;
 }
 
-#boring-img #boring-img1, #fun-img #fun-img1{
-    width: 325px;
+.vocabulary-images, #boring-img, #boring-img1, #fun-img, #fun-img1{
+    width: 15em;
     height: auto;
 }
+
+#dirty-image1, #far-img1, #boring-img1, #fun-img1 {
+    width: 15.8em;
+    height: auto;
+}
+
 
 /* Conversation Section */
 .conversation {
@@ -579,84 +584,215 @@ p strong {
     color: #FF5722;
 }
 
-
-
 /* Smartphones (portrait and landscape) */
 @media screen and (max-width: 768px) {
     body {
         padding: 10px;
     }
 
-    h2 {
-        font-size: 1.6em;
-        padding: 6px;
+    #unit-header {
+        flex-direction: column;
+        align-items: center;
     }
 
-    h3 {
-        font-size: 1.3em;
+    .unit-info h2, .unit-info h3, .unit-info p {
+        text-align: center;
     }
 
-    p, ol li, .conversation p {
-        font-size: 0.9em;
+    .unit-info h2 {
+        font-size: 1.4em;
     }
 
-    section {
-        padding: 10px;
-        margin-bottom: 20px;
+    .unit-info h3 {
+        font-size: 2em;
     }
 
-    /* Adjust image size */
-    .image-container {
+    .unit-info p {
+        font-size: 1.5em;
+    }
+
+    .grammar-outcomes {
+        margin-left: 0;
+    }
+
+    .grammar-outcomes h4 {
+        font-size: 1em;
+    }
+
+    .vocabulary-images, .reading-images, .exercise3-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #seattle-people-img, #australia-map-img {
         width: 150px;
-        height: 100px;
+        height: auto;
     }
 
-    /* Table cells should have smaller padding for mobile */
-    table td {
+    .vocabulary-images, #boring-img, #boring-img1, #fun-img, #fun-img1,
+    #dirty-image1, #far-img1 {
+        width: 12em;
+        height: auto;
+    }
+
+    .conversation p, .comprehension-exercise p, .exercise p {
+        font-size: 1em;
+    }
+
+    .step-indicator {
+        position: static;
+        margin: 10px 0;
+    }
+
+    .step-indicator h4, .step-indicator p {
+        font-size: 1em;
+    }
+
+    .student-info-table th, .student-info-table td {
         padding: 6px;
     }
 
-    /* Example specific for making lists more readable on small screens */
-    ol {
-        margin-left: 15px;
+    /* Adjust the size of images */
+    #womanRainyDayEx6, #city-info-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .chef-image #exercise-8-image {
+        width: 100%;
+        height: auto;
+    }
+
+    input, .input-exercise {
+        width: 95%;
+    }
+
+    table {
+        width: 100%;
     }
 }
 
-/* Small smartphones (very narrow screens) */
-@media screen and (max-width: 480px) {
-    body {
-        padding: 5px;
+/* Tablets (landscape) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #unit-header {
+        flex-direction: row;
+        align-items: center;
     }
 
-    h2 {
-        font-size: 1.4em;
-        padding: 4px;
+    .unit-info h2 {
+        font-size: 1.6em;
     }
 
-    h3 {
+    .unit-info h3 {
+        font-size: 2.4em;
+    }
+
+    .unit-info p {
+        font-size: 1.7em;
+    }
+
+    .vocabulary-images, .reading-images, .exercise3-images {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #seattle-people-img, #australia-map-img {
+        width: 180px;
+        height: auto;
+    }
+
+    .vocabulary-images, #boring-img, #boring-img1, #fun-img, #fun-img1 {
+        width: 14em;
+    }
+
+    .grammar-outcomes {
+        margin: 10px;
+        width: auto;
+    }
+
+    .step-indicator {
+        position: relative;
+        left: 10px;
+        bottom: -5px;
+    }
+
+    .step-indicator h4, .step-indicator p {
         font-size: 1.2em;
     }
 
-    p, ol li, .conversation p {
-        font-size: 0.8em;
+    table {
+        width: 100%;
+    }
+}
+
+/* Small desktops (1024px - 1280px) */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    body {
+        padding: 15px;
     }
 
-    section {
+    .unit-info h2 {
+        font-size: 1.8em;
+    }
+
+    .unit-info h3 {
+        font-size: 2.6em;
+    }
+
+    .unit-info p {
+        font-size: 1.8em;
+    }
+
+    .step-indicator {
+        position: absolute;
+        bottom: -10px;
+        left: 15px;
+    }
+
+    #city-info-image {
+        width: 95%;
+        height: auto;
+    }
+
+    input, .input-exercise {
+        width: 80%;
+    }
+
+    table th, table td {
         padding: 8px;
     }
+}
 
-    /* Further reduce image size for narrow screens */
-    .image-container {
-        width: 120px;
-        height: 80px;
+/* Large screens (1280px and above) */
+@media screen and (min-width: 1281px) {
+    .vocabulary-images, .reading-images, .exercise3-images {
+        justify-content: space-between;
     }
 
-    /* Table cells get even tighter on very small screens */
-    table td {
-        padding: 4px;
+    #city-info-image {
+        width: 90%;
+        height: auto;
     }
 
-    ol {
-        margin-left: 10px;
+    .unit-info h3 {
+        font-size: 3em;
+    }
+
+    .input-exercise {
+        width: 60%;
+    }
+
+    .step-indicator {
+        bottom: -15px;
+        left: 20px;
+    }
+
+    .card-container {
+        max-width: 1300px;
+    }
+
+    table {
+        width: 70%;
     }
 }
