@@ -453,6 +453,62 @@ table td {
     
 }
 
+/* Exercise 2 answers and button */
+/* General Button Styling */
+.submit-btn {
+    background-color: #336699; /* Dark blue color for education feel */
+    color: #fff; /* White text for readability */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Hover Effect */
+.submit-btn:hover {
+    background-color: #274d7f; /* Darker blue for hover effect */
+    transform: translateY(-2px); /* Slight elevation on hover */
+}
+
+/* Focus Effect */
+.submit-btn:focus {
+    outline: 3px solid #FDE599; /* Light yellow outline for accessibility */
+}
+
+/* Feedback Styling */
+span[id$="-feedback"] {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/* Correct Feedback Styling */
+span[id$="-feedback"] span {
+    padding: 5px;
+}
+
+/* Correct Answer Styling */
+span[id$="-feedback"] span[color="green"] {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+/* Incorrect Answer Styling */
+span[id$="-feedback"] span[color="red"] {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+
 /* exercise 4 */
 .exercise-4-table tr td {
     text-align: left;
@@ -485,7 +541,7 @@ table td {
 }
 
 .input-exercise {
-    width: 60%;
+    width: fit-content;
 }
 
 /* exercise 6 */
