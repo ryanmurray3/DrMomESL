@@ -548,7 +548,7 @@
     <section id="exercise-9">
         <h2>Exercise 9: I’m Not a Teacher</h2>
         <h3>Conversation</h3>
-        <p>Prepare for a conversation. First, write true sentences. Use the words in parentheses.</p>
+        <p>Prepare for a conversation. Use the words in parentheses to construct a correct sentence. Say the correct sentence aloud.</p>
         <ul>
             <li>1. (I / a teacher)</li>
             <li>2. (I / from Italy)</li>
@@ -633,7 +633,10 @@
     
             <h3>Write</h3>
             <p>Write a paragraph about a city. Use the present of <i>be</i>. Use the paragraph in A and your chart to help you.</p>
-    
+            <form>
+                <textarea id="grammar-to-writing-input" name="para-graph" rows="8" cols="30"></textarea>
+            </form>
+            
             <h3>Check Your Work</h3>
             <p>Read your paragraph in B. Underline the present of <i>be</i>. Then use the Editing Checklist to check your work.</p>
     
@@ -656,32 +659,37 @@
         <!-- Part A: Complete the sentences -->
         <h3>Part A: Complete the sentences with She is, He is, It is, We are, or They are.</h3>
         <ol>
-            <li>This park isn’t clean. _______ dirty.</li>
-            <li>My brother is not a student. _______ a teacher.</li>
-            <li>Amy is from Australia. _______ in Seattle now.</li>
-            <li>Michelle and Lisa are not sisters. _______ cousins.</li>
-            <li>My friends and I aren’t from Japan. _______ from China.</li>
+            <li>This park isn’t clean. <input type=text id="u3-review-1a" class="u3-review" style= "width: 50px"> dirty.<span id="u3-review-1a-feedback" class="feedback"></span></li>
+            <li>My brother is not a student. <input type=text id="u3-review-2a" class="u3-review" style= "width: 50px"> <span id="u3-review-2a-feedback" class="feedback"></span>a teacher.</li>
+            <li>Amy is from Australia. <input type=text id="u3-review-3a" class="u3-review" style= "width: 50px"> <span id="u3-review-3a-feedback" class="feedback"></span>in Seattle now.</li>
+            <li>Michelle and Lisa are not sisters. <input type=text id="u3-review-4a" class="u3-review" style= "width: 50px"><span id="u3-review-4a-feedback" class="feedback"></span>cousins.</li>
+            <li>My friends and I aren’t from Japan. <input type=text id="u3-review-5a" class="u3-review" style= "width: 50px"><span id="u3-review-5a-feedback" class="feedback"></span>from China.</li>
         </ol>
 
         <!-- Part B: Rewrite the sentences using contractions -->
         <h3>Part B: Rewrite the sentences. Use contractions.</h3>
         <ol>
-            <li>It is boring.</li>
-            <li>They are not from Brazil.</li>
-            <li>I am not a chef.</li>
-            <li>He is not in Australia.</li>
-            <li>We are in class.</li>
+            <li>It is boring. <input type=text id="u3-review-1b" class="u3-review" style= "width: 300px"><span id="u3-review-1b-feedback" class="feedback"></span></li>
+            <li>They are not from Brazil. <input type=text id="u3-review-2b" class="u3-review" style= "width: 300px"><span id="u3-review-2b-feedback" class="feedback"></span></li>
+            <li>I am not a chef. <input type=text id="u3-review-3b" class="u3-review" style= "width: 300px"><span id="u3-review-3b-feedback" class="feedback"></span></li>
+            <li>He is not in Australia. <input type=text id="u3-review-4b" class="u3-review" style= "width: 300px"><span id="u3-review-4b-feedback" class="feedback"></span></li>
+            <li>We are in class. <input type=text id="u3-review-5b" class="u3-review" style= "width: 300px"><span id="u3-review-5b-feedback" class="feedback"></span></li>
         </ol>
 
         <!-- Part C: Correct the conversation -->
         <h3>Part C: Correct the conversation. There are five mistakes.</h3>
         <div class="conversation">
             <p><strong>A:</strong> Ali from Canada. He a student.</p>
+            <input type=text id="u3-review-1c" class="u3-review" style= "width: 300px">
             <p><strong>B:</strong> No. Ali no is a student. He’s a chef.</p>
+            <input type=text id="u3-review-2c" class="u3-review" style= "width: 300px">
             <p><strong>A:</strong> Oh. I a student. I’m a teacher, too. I be an English language student. I’m a Portuguese language teacher.</p>
+            <input type=text id="u3-review-3c" class="u3-review" style= "width: 900px">
         </div>
 
-        <p><strong>Now check your answers on page 379.</strong></p>
+        <button class="submit-btn" onclick="checkUnit3ReviewAnswers()">Submit Answers</button>
+        <button class="reset-btn" onclick="resetUnit3ReviewAnswers()">Reset Answers</button>
+
     </section>
 
 

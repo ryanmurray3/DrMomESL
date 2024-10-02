@@ -205,3 +205,59 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
         
+        function checkUnit3ReviewAnswers() {
+            // Define correct answers
+            const correctAnswers = {
+                "u3-review-1a": "It is",
+                "u3-review-2a": "He is",
+                "u3-review-3a": "She is",
+                "u3-review-4a": "They are",
+                "u3-review-5a": "We are",
+                "u3-review-1b": "It's boring.",
+                "u3-review-2b": "They aren't from Brazil",
+                "u3-review-3b": "I'm not a chef",
+                "u3-review-4b": "He isn't in Australia",
+                "u3-review-5b": "We're in class",
+                "u3-review-1c": "Ali is from Canada. He is a student.",
+                "u3-review-2c": "No. Ali is not a student. He's a chef.",
+                "u3-review-3c": "Oh. I am a student. I’m a teacher, too. I am an English language student. I’m a Portuguese language teacher."
+            };
+        
+            // Loop through all input elements and check their answers only if they are not empty
+            for (let id in correctAnswers) {
+                const inputElement = document.getElementById(id);
+                const feedbackElement = document.getElementById(`${id}-feedback`);
+        
+                if (inputElement.value.trim() !== "") { // Only check if the input is not empty
+                    if (inputElement.value.trim() === correctAnswers[id]) {
+                        feedbackElement.innerHTML = '<span style="color: green;">Correct</span>';
+                        inputElement.style.backgroundColor = "green";
+                        inputElement.style.color = "white";
+                    } else {
+                        feedbackElement.innerHTML = '<span style="color: red;">Incorrect</span>';
+                        inputElement.style.backgroundColor = "red";
+                        inputElement.style.color = "white";
+                    }
+                } else {
+                    feedbackElement.innerHTML = ""; // Clear feedback if input is empty
+                    inputElement.style.backgroundColor = ""; // Reset background color
+                    inputElement.style.color = ""; // Reset text color
+                }
+            }
+        }
+        
+        function resetUnit3ReviewAnswers() {
+            // Get all input fields in the Unit 3 Review section
+            let inputElements = document.querySelectorAll('.u3-review');
+        
+            // Loop through each input field and reset its value and styles
+            inputElements.forEach(input => {
+                input.value = "";  // Clear the value
+                input.style.backgroundColor = "";  // Reset background color
+                input.style.color = "";  // Reset text color
+                let feedbackElement = document.getElementById(`${input.id}-feedback`);
+                feedbackElement.innerHTML = "";  // Clear feedback
+            });
+        }
+        
+        

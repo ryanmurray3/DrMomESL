@@ -668,6 +668,20 @@ ol li {
     margin-bottom: 8px;
 }
 
+#grammar-to-writing-input {
+    width: 850px;
+    height: 200px;
+    font-size: large;
+}
+
+/* unit 3 Review */
+
+.u3-review {
+    border: none;
+    border-bottom: 1.5px solid;
+    font-size: large;
+}
+
 /* Part C note */
 p strong {
     color: #FF5722;
