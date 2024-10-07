@@ -1,0 +1,447 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5; /* Light background to simulate a workbook page */
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for card effect */
+}
+
+/* Heading Styles */
+h2 {
+    color: #0072bc; /* Dark blue */
+    font-size: 24px;
+}
+
+h3 {
+    color: #0072bc; /* Dark blue */
+    background-color: #ffe799; /* Yellow background for subheadings */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+h4 {
+    color: #333;
+    font-size: 18px;
+}
+
+/* Text Styles */
+p {
+    line-height: 1.6;
+    margin: 10px 0;
+    color: #333; /* Standard text color */
+}
+
+/* Vocabulary Section Background */
+#vocabulary-section {
+    background-color: #ffffff; /* White background for vocabulary section */
+}
+
+/* Image Gallery for Vocabulary Section */
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.image-item {
+    text-align: center;
+    background-color: #f0f0f0; /* Light gray background for image containers */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.image-item img {
+    width: 300px;
+    height: auto;
+}
+
+/* Conversation Styles */
+.conversation {
+    background-color: #f4faff; /* Light blue background for conversation blocks */
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 5px solid #0072bc; /* Blue border on the left for emphasis */
+    margin-top: 20px;
+}
+
+.exercise {
+    margin-top: 30px;
+    background-color: #fffae5; /* Light yellow for exercise sections */
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 5px solid #f4a742; /* Orange border for exercises */
+}
+
+/* Seattle Section Background */
+#seattle-section {
+    background-color: #ffffff; /* White background for the Seattle section */
+}
+
+/* Image Gallery for Seattle Section */
+.places-gallery {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.place-item {
+    text-align: center;
+    background-color: #f0f0f0; /* Light gray for Seattle image gallery */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.place-item img {
+    width: 300px;
+    height: auto;
+}
+
+/* Grammar Table Styles */
+.grammar-table {
+    margin-top: 20px;
+    background-color: #e0f7fa; /* Light blue table background */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.grammar-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.grammar-table th, .grammar-table td {
+    border: 1px solid #0072bc;
+    padding: 8px;
+    text-align: left;
+    background-color: #ffffff;
+}
+
+/* True/False Checkbox List */
+.true-false-exercise ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.true-false-exercise li {
+    margin: 10px;
+}
+
+/* More Possessive Adjectives Section */
+#more-possessive-adjectives-section {
+    background-color: #f9f9f9;
+    border-left: 5px solid #3A73AB;
+}
+
+#more-possessive-adjectives-section .fill-in-the-blanks {
+    background-color: #ffffe0;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Same Pronunciation Section */
+#same-pronunciation-section {
+    background-color: #ffffff;
+    border-left: 5px solid #FFA500;
+}
+
+#same-pronunciation-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#same-pronunciation-section ul li {
+    padding: 10px 0;
+}
+
+/* Editing Section */
+#editing-section {
+    background-color: #f9f9f9;
+    border-left: 5px solid #FF6347;
+}
+
+#editing-section .editing-exercise {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Listening Section */
+#listening-section {
+    background-color: #ffffff;
+    border-left: 5px solid #3A73AB;
+}
+
+.listening-exercise li {
+    padding: 10px 0;
+}
+
+/* Belongings Section */
+#belongings-section {
+    background-color: #f9f9f9;
+    border-left: 5px solid #3A73AB;
+}
+
+#belongings-section img {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* University Map Section */
+#university-section {
+    background-color: #ffffff;
+    border-left: 5px solid #FF6347;
+}
+
+#university-section img {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Grammar to Writing Section */
+#grammar-writing-section {
+    background-color: #f9f9f9;
+    border-left: 5px solid #3A73AB;
+}
+
+#grammar-writing-section .photo-section img {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#grammar-writing-section .writing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#grammar-writing-section .writing-table th, 
+#grammar-writing-section .writing-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+#grammar-writing-section .editing-checklist {
+    background-color: #ffffe0;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* Review Section */
+#unit-review-section {
+    background-color: #ffffff;
+    border-left: 5px solid #FF6347;
+}
+
+#unit-review-section h4 {
+    margin-top: 20px;
+}
+
+#unit-review-section .review-exercise {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#unit-review-section .review-exercise li {
+    margin-bottom: 10px;
+}
+
+#unit-review-section .editing-conversation {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* General responsive settings for small screens (mobile) */
+@media (max-width: 768px) {
+
+    /* Section containers */
+    .section {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    /* Table styles for smaller screens */
+    .writing-table,
+    .grammar-table table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .writing-table th, .writing-table td,
+    .grammar-table th, .grammar-table td {
+        padding: 6px;
+    }
+
+    /* Adjusting font sizes for smaller screens */
+    h2, h3, h4 {
+        font-size: 20px;
+    }
+
+    p, li {
+        font-size: 14px;
+    }
+
+    /* Ensure images are responsive */
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Adjust list styles for exercises */
+    .review-exercise li,
+    .editing-checklist ul li {
+        font-size: 14px;
+    }
+
+    /* Editing conversation section padding */
+    .editing-conversation {
+        padding: 10px;
+    }
+
+    /* Make checkboxes and radio buttons more spaced out */
+    input[type="checkbox"], input[type="radio"] {
+        margin-right: 10px;
+        transform: scale(1.2); /* Make checkboxes easier to click on mobile */
+    }
+
+    /* Adjust padding and spacing in checklist */
+    .editing-checklist ul li {
+        padding: 5px;
+        font-size: 14px;
+    }
+}
+
+/* Media Query for Tablets (portrait and landscape) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Section padding adjustments */
+    .section {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    /* Adjust table padding for tablet screens */
+    .writing-table th, .writing-table td,
+    .grammar-table th, .grammar-table td {
+        padding: 10px;
+    }
+
+    /* Font size adjustments for better readability */
+    h2, h3, h4 {
+        font-size: 22px;
+    }
+
+    p, li {
+        font-size: 16px;
+    }
+
+    /* Ensure images are responsive */
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Adjust font sizes for exercises */
+    .review-exercise li,
+    .editing-checklist ul li {
+        font-size: 16px;
+    }
+
+    /* Editing conversation section padding */
+    .editing-conversation {
+        padding: 15px;
+    }
+
+    /* Adjust checkbox and radio button sizes */
+    input[type="checkbox"], input[type="radio"] {
+        margin-right: 8px;
+        transform: scale(1.1); /* Slightly larger checkboxes and radios */
+    }
+}
+
+/* Media Query for Small Screens (Mobile) */
+@media (max-width: 768px) {
+    /* Ensure that the image gallery stacks vertically */
+    .image-gallery {
+        display: block; /* Stack the items vertically */
+    }
+
+    .image-item {
+        margin-bottom: 20px; /* Add space between each stacked item */
+    }
+
+    .image-item img {
+        width: 100%; /* Ensure the images are responsive and take up full width */
+        height: auto;
+    }
+
+        /* Ensure that the places gallery stacks vertically */
+        .places-gallery {
+            display: block; /* Stack the items vertically */
+        }
+    
+        .place-item {
+            margin-bottom: 20px; /* Add space between each stacked item */
+        }
+    
+        .place-item img {
+            width: 100%; /* Ensure the images are responsive and take up full width */
+            height: auto;
+        }
+    
+}
+
+
+/* Media Query for Large Desktops */
+@media (min-width: 1025px) {
+
+    /* General font size for large screens */
+    h2, h3, h4 {
+        font-size: 24px;
+    }
+
+    p, li {
+        font-size: 18px;
+    }
+
+    /* Table and content spacing */
+    .writing-table th, .writing-table td,
+    .grammar-table th, .grammar-table td {
+        padding: 12px;
+    }
+
+    /* Ensure images fill the full width of their containers */
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Editing checklist font sizes */
+    .editing-checklist ul li {
+        font-size: 16px;
+    }
+
+    /* Adjust padding and spacing */
+    .editing-conversation {
+        padding: 20px;
+    }
+
+    /* Increase checkbox and radio button size for large screens */
+    input[type="checkbox"], input[type="radio"] {
+        margin-right: 5px;
+        transform: scale(1); /* Normal size for larger screens */
+    }
+}
