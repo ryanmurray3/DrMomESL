@@ -63,12 +63,25 @@ p {
 }
 
 /* Conversation Styles */
-.conversation {
+.conversation1, .conversation2, .conversation {
     background-color: #f4faff; /* Light blue background for conversation blocks */
     padding: 15px;
     border-radius: 5px;
     border-left: 5px solid #0072bc; /* Blue border on the left for emphasis */
     margin-top: 20px;
+    
+}
+
+.conversation {
+    padding-top: 90px;
+}
+
+.conversation2 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-color: lightgray;
+    width: 600px;
 }
 
 .exercise {
@@ -84,11 +97,28 @@ p {
     background-color: #ffffff; /* White background for the Seattle section */
 }
 
+.conversation-special {
+    text-align: center;
+}
+
+.empty {
+    clear: both;
+}
+
 /* Image Gallery for Seattle Section */
+
+.conversation-image {
+    float: right;
+    width: 300px;
+    height: auto;
+}
 .places-gallery {
+    float: left;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
 }
 
 .place-item {
@@ -99,7 +129,7 @@ p {
 }
 
 .place-item img {
-    width: 300px;
+    width: 250px;
     height: auto;
 }
 
@@ -122,6 +152,80 @@ p {
     text-align: left;
     background-color: #ffffff;
 }
+
+/* Grammar notes table */
+.grammar-notes-table-yellow #yellow-heading {
+    background-color: #edc527;
+    text-align: left;
+    padding-left: 20px;
+    color: whitesmoke;
+}
+
+#grammar-notes-table th {
+    background-color: #4CAF50;
+    text-align: left;
+    padding-left: 20px;
+    color: whitesmoke;
+   
+}
+
+#grammar-notes-table td {
+    margin: 0 auto;
+    text-align: left;
+    padding: 15px;
+    margin-top: 0;
+    border: 1px solid;
+}
+
+#contractions-section h4{
+    font-size: 32px;
+}
+
+/* Step 3 Focused Practice */
+.exercise-discovery-grammar-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+ul.questions, ul.answers {
+    list-style-type: none;
+    padding: 0;
+}
+
+.input-match {
+    border: none;
+    border-bottom: 1.5px solid;
+    width: 30px;
+    text-align: center;
+}
+
+#feedback {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
+#submit-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #336699;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    background-color: #274d7f;
+}
+
 
 /* True/False Checkbox List */
 .true-false-exercise ul {
