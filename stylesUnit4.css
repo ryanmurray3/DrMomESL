@@ -416,6 +416,13 @@ ul.questions, ul.answers {
     height: 30px;
 }
 
+#text-area-write {
+    display: flex;
+    margin: auto;
+    resize: none;
+    font-size: large;
+}
+
 /* Grammar to Writing Section */
 #grammar-writing-section {
     background-color: #f9f9f9;
