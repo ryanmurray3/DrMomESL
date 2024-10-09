@@ -240,3 +240,137 @@ function resetPossessiveAdjectivesEx4() {
     // Clear the feedback section
     // document.getElementById('feedback-ex4').innerHTML = "";
 }
+
+// JavaScript for Review Exercise A
+
+// Add event listeners for submit and reset buttons
+
+document.getElementById('submit-button-A').addEventListener('click', checkReviewExerciseA);
+document.getElementById('reset-button-A').addEventListener('click', resetReviewExerciseA);
+
+// Function to check answers for review-exercise-A
+function checkReviewExerciseA() {
+    const correctAnswersA = {
+        'input-A-1': 'that',
+        'input-A-2': 'those',
+        'input-A-3': 'that',
+        'input-A-4': 'that',
+        'input-A-5': 'those'
+    };
+
+    let feedbackA = '';
+
+    for (let id in correctAnswersA) {
+        const userAnswerA = document.getElementById(id).value.trim().toLowerCase();
+        const correctAnswerA = correctAnswersA[id].toLowerCase();
+
+        if (userAnswerA === correctAnswerA) {
+            feedbackA += `<p class='correct'>Answer for question ${id.split('-')[2]} is correct!</p>`;
+            document.getElementById(id).style.backgroundColor = 'green';
+            document.getElementById(id).style.color = 'white';
+        } else {
+            feedbackA += `<p class='incorrect'>Answer for question ${id.split('-')[2]} is incorrect. The correct answer is ${correctAnswerA}.</p>`;
+            document.getElementById(id).style.backgroundColor = 'red';
+            document.getElementById(id).style.color = 'white';
+        }
+    }
+
+    document.getElementById('feedback-A').innerHTML = feedbackA;
+}
+
+// Function to reset review-exercise-A
+function resetReviewExerciseA() {
+    const inputElementsA = document.querySelectorAll('.review-exercise-A input[type="text"]');
+    inputElementsA.forEach(input => {
+        input.value = '';
+        input.style.backgroundColor = '';
+        input.style.color = '';
+    });
+    document.getElementById('feedback-A').innerHTML = '';
+}
+
+// JavaScript for Review Exercise B
+
+document.getElementById('submit-button-B').addEventListener('click', checkReviewExerciseB);
+document.getElementById('reset-button-B').addEventListener('click', resetReviewExerciseB);
+
+// Function to check answers for review-exercise-B
+// Add event listener for the submit button
+document.getElementById('submit-button-B').addEventListener('click', checkReviewExerciseB);
+
+function checkReviewExerciseB() {
+    const correctAnswersB = {
+        'answer-B-1': 'He',
+        'answer-B-2': 'Her',
+        'answer-B-3': 'your',
+        'answer-B-4': "They're",
+        'answer-B-5': "It's"
+    };
+
+    let feedbackB = '';
+
+    for (let id in correctAnswersB) {
+        const selectedOptionB = document.querySelector(`#${id} .option.selected`);
+        const correctAnswerB = correctAnswersB[id];
+
+        if (selectedOptionB) {
+            const userAnswerB = selectedOptionB.getAttribute('data-answer');
+
+            if (userAnswerB === correctAnswerB) {
+                feedbackB += `<p class='correct'>Answer for question ${id.split('-')[2]} is correct!</p>`;
+                selectedOptionB.style.backgroundColor = 'green';
+                selectedOptionB.style.color = 'white';
+            } else {
+                feedbackB += `<p class='incorrect'>Answer for question ${id.split('-')[2]} is incorrect. The correct answer is ${correctAnswerB}.</p>`;
+                selectedOptionB.style.backgroundColor = 'red';
+                selectedOptionB.style.color = 'white';
+            }
+        } else {
+            feedbackB += `<p class='incorrect'>Answer for question ${id.split('-')[2]} is missing. Please select an answer.</p>`;
+        }
+    }
+
+    document.getElementById('feedback-B').innerHTML = feedbackB;
+}
+
+// Add click event listeners to all the options to mark them as selected
+const optionsB = document.querySelectorAll('.review-exercise-B .option');
+optionsB.forEach(option => {
+    option.addEventListener('click', function () {
+        // Remove selected class from sibling options
+        const siblings = this.parentElement.querySelectorAll('.option');
+        siblings.forEach(sibling => sibling.classList.remove('selected'));
+
+        // Add selected class to the clicked option
+        this.classList.add('selected');
+    });
+});
+
+// Add event listener for the reset button
+document.getElementById('reset-button-B').addEventListener('click', resetReviewExerciseB);
+
+function resetReviewExerciseB() {
+    // Reset all options by removing 'selected' class and styles
+    const optionsB = document.querySelectorAll('.review-exercise-B .option');
+    optionsB.forEach(option => {
+        option.classList.remove('selected');
+        option.style.backgroundColor = '';  // Reset background color
+        option.style.color = '';  // Reset text color
+    });
+
+    // Clear feedback
+    document.getElementById('feedback-B').innerHTML = '';
+}
+
+
+// Function to reset review-exercise-B
+function resetReviewExerciseB() {
+    const optionElementsB = document.querySelectorAll('.review-exercise-B .option');
+    optionElementsB.forEach(option => {
+        option.classList.remove('selected');
+        option.style.backgroundColor = '';
+        option.style.color = '';
+    });
+    document.getElementById('feedback-B').innerHTML = '';
+}
+

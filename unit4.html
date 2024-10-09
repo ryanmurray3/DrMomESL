@@ -583,35 +583,78 @@
     <h3>Unit 4 Review</h3>
 
     <h4>A. Complete the sentences with <b>that</b> or <b>those</b>.</h4>
-    <ol class="review-exercise">
-        <li>______ is an expensive car.</li>
-        <li>Are ______ his friends?</li>
-        <li>Is ______ your brother?</li>
-        <li>______ is her camera.</li>
-        <li>______ aren’t my keys!</li>
+    <ol class="review-exercise-A">
+        <li>1. <input type="text" style="width: 42px;" id="input-A-1"> is an expensive car.</li>
+        <li>2. Are <input type="text" style="width: 42px;" id="input-A-2"> his friends?</li>
+        <li>3. Is <input type="text" style="width: 42px;" id="input-A-3"> your brother?</li>
+        <li>4. <input type="text" style="width: 42px;" id="input-A-4"> is her camera.</li>
+        <li>5. <input type="text" style="width: 42px;" id="input-A-5"> aren’t my keys!</li>
     </ol>
+    <button id="submit-button-A">Submit</button>
+    <button id="reset-button-A">Reset</button>
 
-    <h4>B. Complete the sentences. Circle the correct answers.</h4>
-    <ol class="review-exercise">
-        <li>He <b>is / His</b> my friend.</li>
-        <li>That's my sister. She <b>Her / Her</b> name is Lynn.</li>
-        <li>What are <b>you / your</b> names?</li>
-        <li>Those are good cameras. <b>Their / They’re</b> very popular.</li>
-        <li>I really like the Barksdale Movie Theater. <b>It’s / Its</b> my favorite place.</li>
-    </ol>
-
+    <div id="feedback-A"></div>
+    <div class="review-exercise-B">
+        <h4>B. Complete the sentences. Circle the correct answers.</h4>
+        <p>Look at the pictures. Complete the sentences. Click on the correct answers.</p>
+        <ol>
+            <li>
+                <span class="answer" id="answer-B-1">
+                    <button class="option" data-answer="He">He</button> /
+                    <button class="option" data-answer="His">His</button>
+                </span> is my friend.
+            </li>
+            <li>
+                That's my sister.
+                <span class="answer" id="answer-B-2">
+                    <button class="option" data-answer="She">She</button> /
+                    <button class="option" data-answer="Her">Her</button>
+                </span> name is Lynn.
+            </li>
+            <li>What are
+                <span class="answer" id="answer-B-3">
+                    <button class="option" data-answer="you">you</button> /
+                    <button class="option" data-answer="your">your</button>
+                </span> names?
+            </li>
+            <li>Those are good cameras.
+                <span class="answer" id="answer-B-4">
+                    <button class="option" data-answer="Their">Their</button> /
+                    <button class="option" data-answer="They're">They're</button>
+                </span> very popular.
+            </li>
+            <li>I really like the Barksdale Movie Theater.
+                <span class="answer" id="answer-B-5">
+                    <button class="option" data-answer="It's">It's</button> /
+                    <button class="option" data-answer="Its">Its</button>
+                </span> my favorite place.
+            </li>
+        </ol>
+        <button id="submit-button-B">Submit</button>
+        <button id="reset-button-B">Reset</button>
+        <div id="feedback-B"></div>
+    </div>
+    
     <h4>C. Correct the conversation. There are five mistakes.</h4>
     <div class="editing-conversation">
         <p>
             A: Is those your family in the photo? <br>
+            <input type="text"><br>
             B: Yes. That's me brother, and that's me sister. <br>
+            <input type="text"><br>
             A: What are they're names? <br>
+            <input type="text"><br>
             B: He's name is Robert, and her name is Tammy. <br>
+            <input type="text"><br>
             A: That your dog? <br>
-            B: Yes. Its name is Spot.
+            <input type="text"><br>
+            B: Yes. Its name is Spot.<br>
+            <input type="text">
         </p>
     </div>
+    
 </div>
+
 
     <script src="scriptUnit4.js"></script>
 </body>

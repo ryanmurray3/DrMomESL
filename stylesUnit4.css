@@ -465,12 +465,12 @@ ul.questions, ul.answers {
     margin-top: 20px;
 }
 
-#unit-review-section .review-exercise {
+#unit-review-section .review-exercise-A, .review-exercise-B {
     list-style-type: none;
     padding-left: 0;
 }
 
-#unit-review-section .review-exercise li {
+#unit-review-section .review-exercise-A li, .review-exercise-B li {
     margin-bottom: 10px;
 }
 
@@ -480,6 +480,21 @@ ul.questions, ul.answers {
     border-radius: 5px;
 }
 
+#submit-button-A, #submit-button-B {
+    background-color: rgb(191, 193, 191);
+}
+
+#submit-button-A:hover, #submit-button-B:hover {
+    background-color: #d06100;
+}
+
+#reset-button-A, #reset-button-B {
+    background-color: rgb(93, 187, 93);
+}
+
+#reset-button-A:hover, #reset-button-B:hover {
+    background-color: #5959f7;
+}
 /* General responsive settings for small screens (mobile) */
 @media (max-width: 768px) {
 
