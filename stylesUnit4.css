@@ -97,8 +97,9 @@ p {
     width: 600px;
 }
 
-.exercise {
+.exercise, .exercise-discover-grammar {
     margin-top: 30px;
+    margin-bottom: 30px;
     background-color: #fffae5; /* Light yellow for exercise sections */
     padding: 15px;
     border-radius: 5px;
@@ -225,7 +226,9 @@ ul.questions, ul.answers {
     color: red;
 }
 
-#submit-button, #reset-button, #submit-button-ex2, #reset-button-ex2, #submit-button-ex3, #reset-button-ex3 {
+#submit-button, #reset-button, #submit-button-ex2,
+ #reset-button-ex2, #submit-button-ex3, #reset-button-ex3,
+ #submit-button-ex4, #reset-button-ex4 {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #336699;
@@ -233,20 +236,21 @@ ul.questions, ul.answers {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 85.5px
+    width: 85.5px;
 }
 
-#reset-button, #reset-button-ex2, #reset-button-ex3 {
+#reset-button, #reset-button-ex2, #reset-button-ex3, #reset-button-ex4 {
     margin-left: 20px;
     background-color: #d00000;
     
 }
 
-#reset-button:hover, #reset-button-ex2:hover, #reset-button-ex3:hover {
+#reset-button:hover, #reset-button-ex2:hover, #reset-button-ex3:hover, #reset-button-ex4:hover {
     background-color: #bb0101;
 }
 
-#submit-button:hover, #submit-button-ex2:hover, #submit-button-ex3:hover  {
+#submit-button:hover, #submit-button-ex2:hover, #submit-button-ex3:hover,
+#submit-button-ex4:hover  {
     background-color: #274d7f;
 }
 
@@ -323,9 +327,17 @@ ul.questions, ul.answers {
 }
 
 #editing-section .editing-exercise {
+    display: flex;
+    justify-content: space-around;
     background-color: #f0f0f0;
     padding: 15px;
+    padding-left: 45px;
+    padding-right: 45px;
     border-radius: 5px;
+}
+
+.editing-exercise li {
+    padding: 5px;
 }
 
 /* Listening Section */
@@ -352,6 +364,7 @@ ul.questions, ul.answers {
 
 /* University Map Section */
 #university-section {
+    position: relative;
     background-color: #ffffff;
     border-left: 5px solid #FF6347;
 }
@@ -360,6 +373,47 @@ ul.questions, ul.answers {
     width: 100%;
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+#university-input-1, #university-input-2,
+#university-input-3, #university-input-4 {
+    position: absolute;
+    font-size: large;
+    background-color: #b7ffb9;
+
+}
+
+#university-input-1:hover, #university-input-2:hover,
+#university-input-3:hover, #university-input-4:hover {
+    background-color: #dcdcdc;
+}
+
+#university-input-1 {
+    top: 272px;
+    left: 112px;
+    width: 205px;
+    height: 30px;
+}
+
+#university-input-2 {
+    top: 320px;
+    left: 412px;
+    width: 205px;
+    height: 30px;
+}
+
+#university-input-3 {
+    top: 555px;
+    right: 22px;
+    width: 205px;
+    height: 30px;
+}
+
+#university-input-4 {
+    top: 770px;
+    left: 197px;
+    width: 205px;
+    height: 30px;
 }
 
 /* Grammar to Writing Section */

@@ -188,4 +188,55 @@ possessiveOptions.forEach(option => {
     });
 });
 
+// Add event listeners for submit and reset buttons
+document.getElementById('submit-button-ex4').addEventListener('click', checkPossessiveAdjectivesEx4);
+document.getElementById('reset-button-ex4').addEventListener('click', resetPossessiveAdjectivesEx4);
 
+// Correct answers for Exercise 4
+const possessiveAdjectivesAnswersEx4 = {
+    'input-ex4-1': 'my',
+    'input-ex4-2': 'his',
+    'input-ex4-3': 'their',
+    'input-ex4-4': 'our',
+    'input-ex4-5': 'my',
+    'input-ex4-6': 'his',
+    'input-ex4-7': 'our',
+    'input-ex4-8': 'her',
+    'input-ex4-9': 'his'
+};
+
+// Function to check answers for Exercise 4
+function checkPossessiveAdjectivesEx4() {
+    let feedbackEx4 = '';
+
+    for (let id in possessiveAdjectivesAnswersEx4) {
+        const userAnswer = document.getElementById(id).value.trim().toLowerCase();
+        const correctAnswer = possessiveAdjectivesAnswersEx4[id];
+
+        if (userAnswer === correctAnswer) {
+            feedbackEx4 += `<p class="correct">Answer for input ${id.split('-')[2]} is correct!</p>`;
+            document.getElementById(id).style.backgroundColor = "green";
+            document.getElementById(id).style.color = "white";
+        } else {
+            feedbackEx4 += `<p class="incorrect">Answer for input ${id.split('-')[2]} is incorrect. The correct answer is ${correctAnswer}.</p>`;
+            document.getElementById(id).style.backgroundColor = "red";
+            document.getElementById(id).style.color = "white";
+        }
+    }
+
+    // document.getElementById('feedback-ex4').innerHTML = feedbackEx4;
+}
+
+// Function to reset answers for Exercise 4
+function resetPossessiveAdjectivesEx4() {
+    // Loop through all input fields and reset their values and styles
+    const inputElements = document.querySelectorAll('#more-possessive-adjectives-section input[type="text"]');
+    inputElements.forEach(input => {
+        input.value = "";  // Clear the value
+        input.style.backgroundColor = "";  // Reset background color
+        input.style.color = "";  // Reset text color
+    });
+
+    // Clear the feedback section
+    // document.getElementById('feedback-ex4').innerHTML = "";
+}
