@@ -30,13 +30,13 @@ document.getElementById('submit-button').addEventListener('click', checkAnswers)
 
 function checkAnswers() {
     const correctAnswers = {
-        'input-1': 'c',
+        'input-1': 'd',
         'input-2': 'e',
         'input-3': 'g',
-        'input-4': 'b',
+        'input-4': 'c',
         'input-5': 'f',
         'input-6': 'a',
-        'input-7': 'd'
+        'input-7': 'b'
     };
 
     let feedback = '';
