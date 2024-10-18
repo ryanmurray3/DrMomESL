@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff9e6;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9c929;
+    padding: 15px;
+    border-bottom: 2px solid #ddd;
+}
+
+.unit-section {
+    width: 50%;
+}
+
+.unit-section h1 {
+    font-size: 24px;
+    color: #0056b3;
+}
+
+.unit-section h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+.unit-section h3 {
+    font-size: 16px;
+    color: #0056b3;
+}
+
+.outcomes-section {
+    width: 45%;
+}
+
+.outcomes-section h4 {
+    font-size: 18px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.outcomes-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.content {
+    padding: 20px 0;
+}
+
+.instructions h4 {
+    font-size: 18px;
+    color: #0056b3;
+}
+
+.instructions h5 {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.instructions p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.example {
+    background-color: #e0f7fa;
+    padding: 10px;
+    border-left: 4px solid #00796b;
+}
+
+.example p {
+    font-size: 14px;
+    color: #00796b;
+}
+
+.images-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.image-container img {
+    width: 150px;
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+.image-container p {
+    font-size: 14px;
+    margin-top: 5px;
+}
