@@ -10,7 +10,7 @@ body {
 }
 
 .container, .content {
-    width: 80%;
+    width: 90%;
     margin: 20px auto;
     background-color: #fff;
     padding: 20px;
@@ -113,6 +113,89 @@ body {
 .image-container p {
     font-size: 14px;
     margin-top: 5px;
+}
+
+.after-you-read h4, .grammar-notes h4 {
+    font-size: 18px;
+    color: #388e3c;
+}
+
+.exercise h5 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.exercise h6 {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ol {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+ol li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.grammar-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.grammar-table th, .grammar-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.grammar-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.grammar-notes .grammar-note {
+    margin-bottom: 20px;
+}
+
+.grammar-note h5 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.grammar-note p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.example {
+    padding: 10px;
+    background-color: #e0f7fa;
+    border-left: 4px solid #00796b;
+    margin-bottom: 10px;
+}
+
+.example p {
+    font-size: 14px;
+    color: #00796b;
 }
 
 .reading-section h4 {
