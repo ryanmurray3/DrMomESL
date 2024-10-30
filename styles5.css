@@ -132,7 +132,7 @@ body {
 
 .image-container img,
 .image-placeholder {
-  width: 250px;
+  width: 220px;
   height: auto;
   border: 1px solid #ddd;
   background-color: #ddd;
@@ -141,6 +141,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.image-placeholder-1 {
+    width: 90%;
+    height: auto;
+    margin: 20px;
+}
+
+.image-placeholder-2 {
+    float: right;
+    width: 50%;
+    height: auto;
+    margin: 20px;
 }
 
 /* Grammar and Exercise Tables */
