@@ -168,192 +168,205 @@ function resetFillInTheBlanks() {
 }
 
 function checkExercise4Answers() {
-    const correctAnswers = {
-      q1: {
-        answerA: "is steve from portland?",
-        answerB: "no, he's not."
-      },
-      q2: {
-        answerA: "is she a server?",
-        answerB: "yes, she is."
-      },
-      q3: {
-        answerA: "are they nurses?",
-        answerB: "no, they're doctors."
-      },
-      q4: {
-        answerA: "who is that man?",
-        answerB: "he's my teacher."
-      },
-      q5: {
-        answerA: "are mark and kathy married?",
-        answerB: "no, they aren't."
-      }
-    };
+  const correctAnswers = {
+    q1: {
+      answerA: "is steve from portland?",
+      answerB: "no, he's not.",
+    },
+    q2: {
+      answerA: "is she a server?",
+      answerB: "yes, she is.",
+    },
+    q3: {
+      answerA: "are they nurses?",
+      answerB: "no, they're doctors.",
+    },
+    q4: {
+      answerA: "who is that man?",
+      answerB: "he's my teacher.",
+    },
+    q5: {
+      answerA: "are mark and kathy married?",
+      answerB: "no, they aren't.",
+    },
+  };
 
-    let correctCount = 0;
-    let totalQuestions = Object.keys(correctAnswers).length * 2;
+  let correctCount = 0;
+  let totalQuestions = Object.keys(correctAnswers).length * 2;
 
-    for (let question in correctAnswers) {
-      let userAnswerA = document.getElementById(`${question}-answer-a`).value.trim().toLowerCase();
-      let userAnswerB = document.getElementById(`${question}-answer-b`).value.trim().toLowerCase();
-      let correctAnswerA = correctAnswers[question].answerA;
-      let correctAnswerB = correctAnswers[question].answerB;
+  for (let question in correctAnswers) {
+    let userAnswerA = document
+      .getElementById(`${question}-answer-a`)
+      .value.trim()
+      .toLowerCase();
+    let userAnswerB = document
+      .getElementById(`${question}-answer-b`)
+      .value.trim()
+      .toLowerCase();
+    let correctAnswerA = correctAnswers[question].answerA;
+    let correctAnswerB = correctAnswers[question].answerB;
 
-      if (userAnswerA === correctAnswerA) {
-        document.getElementById(`${question}-answer-a`).style.color = "green";
+    if (userAnswerA === correctAnswerA) {
+      document.getElementById(`${question}-answer-a`).style.color = "green";
+      correctCount++;
+    } else {
+      document.getElementById(`${question}-answer-a`).style.color = "red";
+    }
+
+    if (userAnswerB === correctAnswerB) {
+      document.getElementById(`${question}-answer-b`).style.color = "green";
+      correctCount++;
+    } else {
+      document.getElementById(`${question}-answer-b`).style.color = "red";
+    }
+  }
+
+  document.getElementById(
+    "exercise4Result"
+  ).textContent = `You got ${correctCount} out of ${totalQuestions} correct.`;
+}
+
+function resetExercise4Answers() {
+  const inputs = document.querySelectorAll(".answer-input");
+  inputs.forEach((input) => {
+    input.value = "";
+    input.style.color = "";
+  });
+  document.getElementById("exercise4Result").textContent = "";
+}
+
+function checkMatchingAnswersReview() {
+  const correctAnswers = {
+    matchq1: "d",
+    matchq2: "c",
+    matchq3: "e",
+    matchq4: "a",
+    matchq5: "b",
+  };
+
+  let correctCount = 0;
+  let totalQuestions = Object.keys(correctAnswers).length;
+
+  for (let question in correctAnswers) {
+    // Extracting the correct input element using the right ID
+    let userAnswer = document.getElementById(question);
+
+    // Ensure the element is found before trying to read its value
+    if (userAnswer) {
+      let userAnswerValue = userAnswer.value.trim().toLowerCase();
+      if (userAnswerValue === correctAnswers[question]) {
+        userAnswer.style.color = "green";
         correctCount++;
       } else {
-        document.getElementById(`${question}-answer-a`).style.color = "red";
+        userAnswer.style.color = "red";
       }
+    }
+  }
 
-      if (userAnswerB === correctAnswerB) {
-        document.getElementById(`${question}-answer-b`).style.color = "green";
+  document.getElementById(
+    "matchingResult"
+  ).textContent = `You got ${correctCount} out of ${totalQuestions} correct.`;
+}
+
+function resetMatchingAnswersReview() {
+  const inputs = document.querySelectorAll(".match-input");
+  inputs.forEach((input) => {
+    input.value = "";
+    input.style.color = "";
+  });
+  document.getElementById("matchingResult").textContent = "";
+}
+
+function checkConversationAnswers() {
+  const correctAnswers = {
+    convq1: "who",
+    convq2: "what",
+    convq3: "who",
+    convq4: "what",
+    convq5: "who",
+  };
+
+  let correctCount = 0;
+  let totalQuestions = Object.keys(correctAnswers).length;
+
+  for (let question in correctAnswers) {
+    // Extracting the correct input element using the right ID
+    let userAnswerElement = document.getElementById(question);
+
+    // Ensure the element is found before trying to read its value
+    if (userAnswerElement) {
+      // Get the value from the input field
+      let userAnswerValue = userAnswerElement.value.trim().toLowerCase();
+
+      // Replace multiple spaces with a single space and then trim
+      userAnswerValue = userAnswerValue.replace(/\s+/g, " ");
+
+      // Log the user input and the expected correct answer
+      console.log(
+        `Question: ${question}, User Answer: "${userAnswerValue}", Correct Answer: "${correctAnswers[question]}"`
+      );
+
+      if (userAnswerValue === correctAnswers[question]) {
+        userAnswerElement.style.color = "green";
         correctCount++;
       } else {
-        document.getElementById(`${question}-answer-b`).style.color = "red";
+        userAnswerElement.style.color = "red";
       }
     }
-
-    document.getElementById("exercise4Result").textContent = `You got ${correctCount} out of ${totalQuestions} correct.`;
   }
 
-  function resetExercise4Answers() {
-    const inputs = document.querySelectorAll(".answer-input");
-    inputs.forEach(input => {
-      input.value = "";
-      input.style.color = "";
-    });
-    document.getElementById("exercise4Result").textContent = "";
-  }
+  document.getElementById(
+    "conversationResult"
+  ).textContent = `You got ${correctCount} out of ${totalQuestions} correct.`;
+}
 
-  function checkMatchingAnswersReview() {
-    const correctAnswers = {
-      matchq1: "d",
-      matchq2: "c",
-      matchq3: "e",
-      matchq4: "a",
-      matchq5: "b"
-    };
-  
-    let correctCount = 0;
-    let totalQuestions = Object.keys(correctAnswers).length;
-  
-    for (let question in correctAnswers) {
-      // Extracting the correct input element using the right ID
-      let userAnswer = document.getElementById(question);
-      
-      // Ensure the element is found before trying to read its value
-      if (userAnswer) {
-        let userAnswerValue = userAnswer.value.trim().toLowerCase();
-        if (userAnswerValue === correctAnswers[question]) {
-          userAnswer.style.color = "green";
-          correctCount++;
-        } else {
-          userAnswer.style.color = "red";
-        }
+function resetConversationAnswers() {
+  const inputs = document.querySelectorAll(".conv-input");
+  inputs.forEach((input) => {
+    input.value = "";
+    input.style.color = "";
+  });
+  document.getElementById("conversationResult").textContent = "";
+}
+
+function checkCorrectionAnswers() {
+  const correctAnswers = {
+    correctq1: "is",
+    correctq2: "she's",
+    correctq3: "is",
+    correctq4: "i'm",
+  };
+
+  let correctCount = 0;
+  let totalQuestions = Object.keys(correctAnswers).length;
+
+  for (let question in correctAnswers) {
+    // Extracting the correct input element using the right ID
+    let userAnswerElement = document.getElementById(question);
+
+    // Ensure the element is found before trying to read its value
+    if (userAnswerElement) {
+      let userAnswerValue = userAnswerElement.value.trim().toLowerCase();
+
+      if (userAnswerValue === correctAnswers[question]) {
+        userAnswerElement.style.color = "green";
+        correctCount++;
+      } else {
+        userAnswerElement.style.color = "red";
       }
     }
-  
-    document.getElementById("matchingResult").textContent = `You got ${correctCount} out of ${totalQuestions} correct.`;
   }
-  
-  function resetMatchingAnswersReview() {
-    const inputs = document.querySelectorAll(".match-input");
-    inputs.forEach(input => {
-      input.value = "";
-      input.style.color = "";
-    });
-    document.getElementById("matchingResult").textContent = "";
-  }
-  
-  
 
-  function checkConversationAnswers() {
-    const correctAnswers = {
-      convq1: "who",
-      convq2: "what",
-      convq3: "who",
-      convq4: "what",
-      convq5: "who"
-    };
-  
-    let correctCount = 0;
-    let totalQuestions = Object.keys(correctAnswers).length;
-  
-    for (let question in correctAnswers) {
-      // Extracting the correct input element using the right ID
-      let userAnswerElement = document.getElementById(question);
-  
-      // Ensure the element is found before trying to read its value
-      if (userAnswerElement) {
-        // Get the value from the input field
-        let userAnswerValue = userAnswerElement.value.trim().toLowerCase();
-  
-        // Replace multiple spaces with a single space and then trim
-        userAnswerValue = userAnswerValue.replace(/\s+/g, ' ');
-  
-        // Log the user input and the expected correct answer
-        console.log(`Question: ${question}, User Answer: "${userAnswerValue}", Correct Answer: "${correctAnswers[question]}"`);
-  
-        if (userAnswerValue === correctAnswers[question]) {
-          userAnswerElement.style.color = "green";
-          correctCount++;
-        } else {
-          userAnswerElement.style.color = "red";
-        }
-      }
-    }
-  
-    document.getElementById("conversationResult").textContent = `You got ${correctCount} out of ${totalQuestions} correct.`;
-  }
-  
-  function resetConversationAnswers() {
-    const inputs = document.querySelectorAll(".conv-input");
-    inputs.forEach(input => {
-      input.value = "";
-      input.style.color = "";
-    });
-    document.getElementById("conversationResult").textContent = "";
-  }
-  
-  function checkCorrectionAnswers() {
-    const correctAnswers = {
-      correctq1: "is",
-      correctq2: "she's",
-      correctq3: "is",
-      correctq4: "i'm"
-    };
-  
-    let correctCount = 0;
-    let totalQuestions = Object.keys(correctAnswers).length;
-  
-    for (let question in correctAnswers) {
-      // Extracting the correct input element using the right ID
-      let userAnswerElement = document.getElementById(question);
-  
-      // Ensure the element is found before trying to read its value
-      if (userAnswerElement) {
-        let userAnswerValue = userAnswerElement.value.trim().toLowerCase();
-  
-        if (userAnswerValue === correctAnswers[question]) {
-          userAnswerElement.style.color = "green";
-          correctCount++;
-        } else {
-          userAnswerElement.style.color = "red";
-        }
-      }
-    }
-  
-    document.getElementById("correctionResult").textContent = `You got ${correctCount} out of ${totalQuestions} correct.`;
-  }
-  
-  function resetCorrectionAnswers() {
-    const inputs = document.querySelectorAll(".correct-input");
-    inputs.forEach(input => {
-      input.value = "";
-      input.style.color = "";
-    });
-    document.getElementById("correctionResult").textContent = "";
-  }
-  
+  document.getElementById(
+    "correctionResult"
+  ).textContent = `You got ${correctCount} out of ${totalQuestions} correct.`;
+}
+
+function resetCorrectionAnswers() {
+  const inputs = document.querySelectorAll(".correct-input");
+  inputs.forEach((input) => {
+    input.value = "";
+    input.style.color = "";
+  });
+  document.getElementById("correctionResult").textContent = "";
+}
