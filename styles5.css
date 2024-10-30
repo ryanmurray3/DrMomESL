@@ -132,7 +132,7 @@ body {
 
 .image-container img,
 .image-placeholder {
-  width: 150px;
+  width: 250px;
   height: auto;
   border: 1px solid #ddd;
   background-color: #ddd;
