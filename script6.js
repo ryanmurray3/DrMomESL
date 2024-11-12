@@ -126,6 +126,7 @@ function setupEditingExercise(sectionSelector, submitSelector, resetSelector, in
 
 // Function to handle review sections
 function setupReviewSections() {
+    // Section A: Complete the Paragraph
     setupDropdownExercise('#review-a', '#submit-review-a', '#reset-review-a', '#review-a select');
 
     // Review B Section
@@ -142,6 +143,30 @@ function setupReviewSections() {
         c1: 'No, it’s on the third floor.',
         c2: 'It’s on First Avenue. It’s between 8th and 9th Streets.',
         c3: 'Is it next to the post office?'
+    }, '.exercise-c-buttons');
+}
+
+
+// Function to handle review sections
+function setupReviewSections() {
+    setupDropdownExercise('#review-a', '#submit-review-a', '#reset-review-a', '#review-a select');
+
+    // Review B Section
+    setupReviewInputs('#review-b', {
+        b1: 'at',
+        b2: 'in',
+        b3: 'on',
+        b4: 'across',
+        b5: 'next to'
+    }, '.exercise-b-buttons');
+
+    // Review C Section
+    setupReviewInputs('#review-c', {
+        c1a: 'on',
+        c1b: 'third',
+        c2a: 'on',
+        c2b: 'between',
+        c3a: 'to'
     }, '.exercise-c-buttons');
 }
 

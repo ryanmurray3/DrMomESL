@@ -594,17 +594,17 @@
                 <ul>
                     <li>
                         1. I live 
-                        <select>
+                        <select data-correct="in">
                             <option value="">Select</option>
                             <option value="in">in</option>
                             <option value="at">at</option>
                         </select> Denver. Denver is a big city 
-                        <select>
+                        <select data-correct="in">
                             <option value="">Select</option>
                             <option value="in">in</option>
                             <option value="on">on</option>
                         </select> Colorado. My apartment is 
-                        <select>
+                        <select data-correct="at">
                             <option value="">Select</option>
                             <option value="in">in</option>
                             <option value="at">at</option>
@@ -612,12 +612,12 @@
                     </li>
                     <li>
                         2. It's across 
-                        <select>
+                        <select data-correct="from">
                             <option value="">Select</option>
                             <option value="from">from</option>
                             <option value="between">between</option>
                         </select> 141 Oak Street and 149 Oak Street. I live 
-                        <select>
+                        <select data-correct="on">
                             <option value="">Select</option>
                             <option value="on">on</option>
                             <option value="in">in</option>
@@ -625,9 +625,10 @@
                     </li>
                 </ul>
                 <div class="exercise-a-buttons">
-                    <button onclick="checkAnswersA()">Submit</button>
-                    <button onclick="resetAnswersA()">Reset</button>
-                </div>
+                  <button id="submit-review-a">Submit</button>
+                  <button id="reset-review-a">Reset</button>
+              </div>
+              
             </section>
         
             <!-- Section B: Complete the Sentences -->
@@ -650,43 +651,38 @@
                 </div>
             </section>
         
-            <!-- Section C: Correct the Conversations -->
-            <section id="review-c">
-                <h3>C. Correct the Conversations</h3>
-                <p>There are five mistakes. Correct them:</p>
-                <ul>
-                    <li>
-                        1. A: Is your apartment in the second floor?
-                        <br>
-                        B: No, it’s on the three floor.
-                        <br>
-                        <strong>Correction:</strong>
-                        <input type="text" placeholder="Type your correction here" id="c1">
-                    </li>
-                    <li>
-                        2. A: Where's the bank?
-                        <br>
-                        B: It’s First Avenue. It’s between from 8th and 9th Streets.
-                        <br>
-                        <strong>Correction:</strong>
-                        <input type="text" placeholder="Type your correction here" id="c2">
-                    </li>
-                    <li>
-                        3. A: Is it next the post office?
-                        <br>
-                        B: Yes, it is.
-                        <br>
-                        <strong>Correction:</strong>
-                        <input type="text" placeholder="Type your correction here" id="c3">
-                    </li>
-                </ul>
-                <div class="exercise-c-buttons">
-                    <button onclick="checkAnswersC()">Submit</button>
-                    <button onclick="resetAnswersC()">Reset</button>
-                </div>
-            </section>
-        </section>
-        
+           <!-- Section C: Correct the Conversations -->
+<section id="review-c">
+  <h3>C. Correct the Conversations</h3>
+  <p>There are five mistakes. Correct them:</p>
+  <ul>
+      <li>
+          1. A: Is your apartment 
+          <input type="text" placeholder="in" id="c1a"> the second floor?
+          <br>
+          B: No, it’s on the
+          <input type="text" placeholder="three" id="c1b"> floor.
+      </li>
+      <li>
+          2. A: Where's the bank?
+          <br>
+          B: It’s 
+          <input type="text" placeholder="in" id="c2a"> First Avenue. It’s 
+          <input type="text" placeholder="from" id="c2b"> 8th and 9th Streets.
+      </li>
+      <li>
+          3. A: Is it next
+          <input type="text" placeholder="of" id="c3a"> the post office?
+          <br>
+          B: Yes, it is.
+      </li>
+  </ul>
+  <div class="exercise-c-buttons">
+      <button onclick="checkAnswersC()">Submit</button>
+      <button onclick="resetAnswersC()">Reset</button>
+  </div>
+</section>
+
 
     <footer>
       <p>Interactive Web Page based on ESL Workbook Content Unit 6</p>
