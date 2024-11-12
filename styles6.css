@@ -136,6 +136,13 @@ footer p {
     height: auto;
 }
 
+
+
+#submit-matching-game, #reset-matching-game {
+    width: fit-content;
+
+}
+
 /* Add responsive styling */
 @media (max-width: 768px) {
     header {
